@@ -5,12 +5,13 @@ body{
 #app{
   display: flex;
 width: 100vw;
-height: 100vh;
+height:100vh;
 }
 .sidebar{
   background-color: rgb(11, 10, 10);
   color: white;
   width: 10%;
+
 }
 .sidebar > :nth-child(1){
   height: 250px;
@@ -49,13 +50,23 @@ font-size: 3dvh;
       border-bottom: 2px solid grey;
       font-size: 3dvh;
       }
+      .sidebar > :nth-child(6){
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid grey;
+        font-size: 3dvh;
+        }
 .main{
   width: 90%;
   background-color: rgb(16, 14, 14);
   color: white;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 .main .about{
-  margin-left: 30px;
+  margin-left: 100px;
 }
 .main .about> :nth-child(2) {
   margin-left: 30px;
@@ -71,6 +82,7 @@ font-size: 3dvh;
   margin-left: 600px;
   margin-top: -40px;
 }
+
 .main .about > button{
   width: 250px;
   height: 60px;
@@ -81,6 +93,109 @@ font-size: 3dvh;
   margin-left: 100px;
   margin-top: 30px;
 }
-.Mypotfolio{
+.main .about .p{
+  margin-left: 100px;
+}
+.mypotfolio{
+  margin-left: 100px;
+}
+.mypotfolio .p{
+  margin-left: 100px;
+}
+.mypotfolio h1{
   color: aqua;
+
+}
+.Skills{
+  margin-left: 100px;
+}
+.Skills .p{
+  margin-left: 100px;
+}
+.Skills h1{
+  color: aqua;
+}
+.Qualification{
+  margin-left: 100px;
+}
+.Qualification .p{
+  margin-left: 100px;
+}
+.Qualification h1{
+  color: aqua;
+}
+.skills{
+  height: 400px;
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap:90px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 300px;
+}
+img{
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  background-color: #1a1a1a; 
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+img:hover{
+  transform: scale(1.25);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+.qualification-boxes {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.qualification-card {
+  width: 200px;
+  height: 120px;
+  background: #111;
+  color: white;
+  border: 2px solid #00ffe0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.short-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 150%;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+}
+
+.qualification-card:hover .details {
+  opacity: 1;
 }
