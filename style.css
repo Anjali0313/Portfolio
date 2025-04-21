@@ -65,25 +65,25 @@ font-size: 3dvh;
   overflow: scroll;
   scrollbar-width: none;
 }
-.main .about{
+.main #about{
   margin-left: 100px;
 }
-.main .about> :nth-child(2) {
+.main #about> :nth-child(2) {
   margin-left: 30px;
 }
-.main .about > :nth-child(4) {
+.main #about > :nth-child(4) {
   margin-left: 70px;
 }
-.main .about > h1{
+.main #about > h1{
   font-size: 60px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.main .about > :nth-child(6){
+.main #about > :nth-child(6){
   margin-left: 600px;
   margin-top: -40px;
 }
 
-.main .about > button{
+.main #about > button{
   width: 250px;
   height: 60px;
   background-color: rgb(16, 14, 14);
@@ -93,35 +93,38 @@ font-size: 3dvh;
   margin-left: 100px;
   margin-top: 30px;
 }
-.main .about .p{
+.main #about .p{
   margin-left: 100px;
 }
-.mypotfolio{
+#myportfolio{
   margin-left: 100px;
 }
-.mypotfolio .p{
+#myportfolio .p{
   margin-left: 100px;
 }
-.mypotfolio h1{
+#myportfolio h1{
   color: aqua;
 
 }
-.Skills{
-  margin-left: 100px;
-}
-.Skills .p{
-  margin-left: 100px;
-}
-.Skills h1{
+span{
   color: aqua;
 }
-.Qualification{
+#Skills{
   margin-left: 100px;
 }
-.Qualification .p{
+#Skills .p{
   margin-left: 100px;
 }
-.Qualification h1{
+#Skills h1{
+  color: aqua;
+}
+#Qualification{
+  margin-left: 100px;
+}
+#Qualification .p{
+  margin-left: 100px;
+}
+#Qualification h1{
   color: aqua;
 }
 .skills{
@@ -133,6 +136,11 @@ font-size: 3dvh;
   justify-content: center;
   align-items: center;
   margin-left: 300px;
+}
+a{
+  text-decoration: none;
+   color: white;
+
 }
 img{
   width: 100px;

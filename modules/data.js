@@ -31,7 +31,7 @@
             year: "2017"
           }
       ],
-
+     Theory:["Welcome to a curated showcase of some of my recent collaborations! These projects have been completed alongsice talented individuals from companies all over the world. while this gallery represets just a small glimpse of my work, it is a testament to the diverse range of projects I have had the privilege to be a part of. Explore this collection as a mere glimpse into the vast ocean of my creative endeavors." ]
     
 };
 export default portfolioData
