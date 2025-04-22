@@ -3,9 +3,8 @@ function renderContainer(item) {
   const app = document.querySelector('#app');
   app.innerHTML = `<div class="sidebar">
   <div><img src="${item.logo}" style="width: 125px; height:210px;"></div>
-  <div><a href="#about" >About</a></div>
+  <div><a href="#aboutme" >About</a></div>
   <div ><a href="#Skills">My Skills</a></div>
-   <div ><a href="#Qualification">Qualification</a></div>
   <div>Resume</div>
   <div><a href ="#contact">Contact</a></div>
   </div>
@@ -14,6 +13,7 @@ function renderContainer(item) {
   <p class="body">&lt;body&gt;</p>
  <div id="about"></div>
   <div id="myportfolio"></div>
+  <div id="aboutme"></div>
   <div id="Skills"></div>
  <div id="Qualification"></div>
   <p class="form">&lt;form&gt;</p>
@@ -52,11 +52,27 @@ function renderMyPortfolio(item){
   <p class="p">&lt;/p&gt;</p>
   <p>&lt;section&gt;</p>
   <div class="projects">${item.projectImg.map(img =>
-   `<div class="images"><img class="image" src="${img.url}">
-   <h2>${img.name}</h2></div>`
+   `<div class="images">
+  <h3>${img.name}</h3>
+  <a href="${img.urlss}" target="_blank">
+        <img class="image" src="${img.url}" />
+   <p>${img.language}</p>
+   </div>`
   ).join("")}</div>
    <p>&lt;/section&gt;</p>
   `;
+}
+function renderAboutMe(item){
+  const aboutme = document.querySelector("#aboutme")
+  aboutme.innerHTML =`
+    <p>&lt;h2&gt;</p>
+   <h1>About Me</h1>
+   <p>&lt;/h2&gt;</p>
+   <p class="p">&lt;p&gt;</p>
+   <h3 class="p">${item.Aboutme}</h3>
+   <p class="p">&lt;/p&gt;</p>
+   <button id="resume">Download Resume</button>
+  `
 }
 function renderSkills(item){
   const skills = document.querySelector("#Skills")
@@ -73,31 +89,17 @@ function renderSkills(item){
          <p class="p">&lt;/p&gt;</p>
    </div>`;
 }
-function renderQualifications(item){
-  const qual = document.querySelector("#Qualification")
-  qual.innerHTML =` 
-  <p>&lt;h2&gt;</p>
-  <h1>Qualification</h1>
-  <p>&lt;/h2&gt;</p> 
-   <p class="p">&lt;p&gt;</p>
-    <div class="qualification-boxes">
-    ${item.qualifications.map(q => `
-      <div class="qualification-card">
-        <span class="short-title">${getShortForm(q.title)}</span>
-        <div class="details">
-        <p> ${q.title}</p>
-          <p>${q.institution}</p>
-          <p>${q.year}</p>
-        </div>
-      </div>
+
+function renderContact(item){
+  const contact = document.querySelector("#contact")
+  contact.innerHTML=`<div>
+  ${item.link.map(link => `
+      <a href="${link.urls}" target="_blank">
+        <img class="icon" src="${link.img}" />
+      </a>
     `).join('')}
     </div>
-     <p class="p">&lt;/p&gt;</p>
- `;
-}
-function renderContact(){
-  const contact = document.querySelector("#contact")
-  contact.innerHTML=`
+    <div>
    <form>
    <h3>CONTACT FORM</h3>
 <label for="text">Name:</label><br>
@@ -108,20 +110,17 @@ function renderContact(){
 <textarea id="message" name="message" rows="4" cols="50" placeholder="message"></textarea><br>
 <button>SEND</button>
 </form>
+</div>
   `
 }
-function getShortForm(title) {
-  if (title.includes("MCA")) return "MCA";
-  if (title.includes("B.Sc")) return "B.Sc";
-  if (title.includes("12th")) return "12th";
-  return title;
-}
+
 function init(portfolioData){
   renderContainer(portfolioData);
   renderAbout(portfolioData);
   renderMyPortfolio(portfolioData);
+  renderAboutMe(portfolioData);
   renderSkills(portfolioData);
-  renderQualifications(portfolioData);
-  renderContact()
+ 
+  renderContact(portfolioData)
 }
 init(portfolioData);
