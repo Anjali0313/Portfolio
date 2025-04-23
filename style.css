@@ -3,7 +3,7 @@ body{
   margin:0;
 }
 #app{
-  display: flex;
+display: flex;
 width: 100vw;
 height:100vh;
 }
@@ -195,7 +195,14 @@ a{
   font-size: 20px;
   font-weight: bold;
 }
-
+#myportfolio .h3 {
+  margin-left:30px;
+  width: 90%;
+}
+#aboutm .h3 {
+  margin-left:30px;
+  width: 90%;
+}
 .details {
   position: absolute;
   top: 0;
@@ -219,7 +226,7 @@ a{
 .qualification-card:hover .details {
   opacity: 1;
 }
-.projects{
+#projects{
   display:flex;
   justify-content: center;
   align-items: center;
@@ -275,8 +282,118 @@ button{
   border-radius: 5px;
   border: 2px solid #00ffe0;
   height: 30px;
-  width: 90px;
+  width: 120px;
 }
 .icon{
   width: 50px;
+}
+@media (max-width: 500px) {
+  .sidebar {
+    width: 24%;
+  }
+
+  .main {
+    width: 80%;
+  }
+
+  .main #about {
+    margin-left: 22px;
+  }
+
+  .main #about > h1 {
+    font-size: 2.5rem;
+  }
+
+  .main .html {
+    margin-left: 0;
+  }
+
+  .main .body {
+    margin-left: 10px;
+  }
+
+  .main #about .p {
+    margin-left: 100px;
+  }
+
+  #myportfolio {
+    margin-left: 20px;
+  }
+  #myportfolio .p {
+    margin-left: 30px;
+   
+  }
+  #myportfolio .h3 {
+    margin-left:3px;
+    width: 95%;
+    font-size: 15px;
+  }
+  #aboutme .h3 {
+    margin-left:3px;
+    width: 95%;
+    font-size: 15px;
+  }
+  .skills {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .image {
+    width: 200px;
+    height: 250px;
+  }
+
+  #Skills {
+    margin-left: 20px;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    gap: 20px;
+  }
+
+  #aboutme {
+    margin-left: 20px;
+  }
+
+  #aboutme .p {
+    margin-left: 30px;
+    font-size: 1.2rem;
+  }
+
+  .main #about > button {
+    margin-left: 30px;
+    width:170px;
+  }
+
+  #resume {
+    margin-left: 30px;
+    width:170px;
+  }
+
+  #message {
+    width: 200px;
+  }
+  .main .form{
+    margin-left: 20px;
+  }
 }

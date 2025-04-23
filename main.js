@@ -5,15 +5,16 @@ function renderContainer(item) {
   <div><img src="${item.logo}" style="width: 125px; height:210px;"></div>
   <div><a href="#aboutme" >About</a></div>
   <div ><a href="#Skills">My Skills</a></div>
-  <div>Resume</div>
+  <div ><a href="#projects">Projects</a></div>
+  <div><a href ="#aboutme">Resume</a></div>
   <div><a href ="#contact">Contact</a></div>
   </div>
   <div class="main">
   <p class="html">&lt;html&gt;</p>
   <p class="body">&lt;body&gt;</p>
- <div id="about"></div>
+ <div id="about"></div> 
+ <div id="aboutme"></div>
   <div id="myportfolio"></div>
-  <div id="aboutme"></div>
   <div id="Skills"></div>
  <div id="Qualification"></div>
   <p class="form">&lt;form&gt;</p>
@@ -21,7 +22,6 @@ function renderContainer(item) {
   <p class="form">&lt;/form&gt;</p>
   <p class="body">&lt;body&gt;</p>
   <p class="html">&lt;html&gt;</p>
- 
   </div>`;
 }
 
@@ -48,14 +48,15 @@ function renderMyPortfolio(item){
   <h1>My Portfolio</h1>
   <p>&lt;/h2&gt;</p>
    <p class="p">&lt;p&gt;</p>
-   <h3 class="p">${item.Theory}</h3>
+   <h3 class="h3">${item.Theory}</h3>
   <p class="p">&lt;/p&gt;</p>
   <p>&lt;section&gt;</p>
-  <div class="projects">${item.projectImg.map(img =>
+  <div id="projects">${item.projectImg.map(img =>
    `<div class="images">
   <h3>${img.name}</h3>
   <a href="${img.urlss}" target="_blank">
         <img class="image" src="${img.url}" />
+        </a>
    <p>${img.language}</p>
    </div>`
   ).join("")}</div>
@@ -69,9 +70,11 @@ function renderAboutMe(item){
    <h1>About Me</h1>
    <p>&lt;/h2&gt;</p>
    <p class="p">&lt;p&gt;</p>
-   <h3 class="p">${item.Aboutme}</h3>
+   <h3 class="h3">${item.Aboutme}</h3>
    <p class="p">&lt;/p&gt;</p>
+    <a href="${item.resume}" target="_blank">
    <button id="resume">Download Resume</button>
+     </a>  
   `
 }
 function renderSkills(item){
@@ -100,16 +103,24 @@ function renderContact(item){
     `).join('')}
     </div>
     <div>
-   <form>
-   <h3>CONTACT FORM</h3>
-<label for="text">Name:</label><br>
-<input type="text" id="text" name="First Name" placeholder="Name"><br>
-<label for="email">Email:</label><br>
-<input type="email" id="email" name="email" placeholder=" email"><br>
-<label for="message">Message:</label><br>
-<textarea id="message" name="message" rows="4" cols="50" placeholder="message"></textarea><br>
-<button>SEND</button>
-</form>
+    <p>Contect Form</p>
+  <form class="contact" action="https://formsubmit.co/------@gmail.com" method="POST">
+            <input type="hidden" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New submission from portfolio!">
+            <input type="hidden" name="_template" value="table">
+            <label for="name" class="label1">Name</label><br>
+            <input type="text" name="text" id="text" required /><br>
+            <label for="name" class="label1">Email</label><br>
+            <input type="email" name="Email" id="email" required /><br>
+  
+            <label for="message" class="label3"> Message </label><br>
+            <textarea name="message" id="message" cols="25" rows="10" required></textarea><br>
+  
+            <button type="submit">
+              <i class="fas fa-paper-plane"></i> &nbsp; Send Message
+            </button>
+          </form>
 </div>
   `
 }
@@ -120,7 +131,6 @@ function init(portfolioData){
   renderMyPortfolio(portfolioData);
   renderAboutMe(portfolioData);
   renderSkills(portfolioData);
- 
   renderContact(portfolioData)
 }
 init(portfolioData);

@@ -1,6 +1,7 @@
  const portfolioData ={
     name: "Anjali",
     title:"Front-End Developer",
+    resume:"https://drive.google.com/file/d/1u0Mi6MbirlMYpD4loDKj0qy6YeomUidR/view?usp=sharing",
     logo:"https://img.freepik.com/premium-vector/blue-letter-logo-with-black-background_853558-5350.jpg",
     Aboutme:"Hello and welcome to my portfolio! I am a passionate front-end developer with a keen eye for design and a love for crafting seamless user experiences. With a strong foundation in HTML,CSS, and JavaScript,I specialize in creating visually stunnning and responsive websites. My goal is to bring ideas to life by combining creativity with technical expertise, ensuring that each project I work on not only looks great but also functions flawlessly across different devices. I thrive on collaborating with clients and fellow developers to deliver innovative solutions that exceed expectations. Browse through my projects in mind. Let's create something amazing together!",
     Skills:[" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu8IaYl3q9jl6N1QWTNYIAHH9nCX64xrLTuQ&s",
