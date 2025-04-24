@@ -5,7 +5,7 @@ function renderContainer(item) {
   <div><img src="${item.logo}" style="width: 125px; height:210px;"></div>
   <div><a href="#aboutme" >About</a></div>
   <div ><a href="#Skills">My Skills</a></div>
-  <div ><a href="#projects">Projects</a></div>
+  <div ><a href="#myportfolio">Projects</a></div>
   <div><a href ="#aboutme">Resume</a></div>
   <div><a href ="#contact">Contact</a></div>
   </div>
@@ -45,7 +45,7 @@ function renderMyPortfolio(item){
   const myportfolio =document.querySelector("#myportfolio")
     myportfolio.innerHTML =`
   <p>&lt;h2&gt;</p>
-  <h1>My Portfolio</h1>
+  <h1>My Projects</h1>
   <p>&lt;/h2&gt;</p>
    <p class="p">&lt;p&gt;</p>
    <h3 class="h3">${item.Theory}</h3>
@@ -104,7 +104,7 @@ function renderContact(item){
     </div>
     <div>
     <p>Contect Form</p>
-  <form class="contact" action="https://formsubmit.co/------@gmail.com" method="POST">
+  <form class="contact" action="https://formsubmit.co/anjali03132001@gmail.com" method="POST">
             <input type="hidden" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="New submission from portfolio!">
@@ -132,5 +132,24 @@ function init(portfolioData){
   renderAboutMe(portfolioData);
   renderSkills(portfolioData);
   renderContact(portfolioData)
+  document.querySelectorAll('.sidebar a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const id = this.getAttribute('href');
+      const target = document.querySelector(id);
+      const container = document.querySelector('.main');
+  
+      if (target) {
+        const offsetTop = target.offsetTop;
+        setTimeout(() => {
+          container.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }, 500);
+      }
+    });
+  });
 }
 init(portfolioData);
+

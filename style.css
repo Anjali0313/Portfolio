@@ -287,6 +287,81 @@ button{
 .icon{
   width: 50px;
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 25%;
+  }
+
+  .main {
+    width: 75%;
+
+  }
+
+  .sidebar > :nth-child(2),
+  .sidebar > :nth-child(3),
+  .sidebar > :nth-child(4),
+  .sidebar > :nth-child(5),
+  .sidebar > :nth-child(6) {
+    font-size: 2dvh;
+  }
+
+  .main .html {
+    margin-left: 40px;
+  }
+
+  .main .body {
+    margin-left: 50px;
+  }
+
+  .main #about {
+    margin-left: 50px;
+  }
+
+  .skills {
+    height: 400px;
+    width: 550px;
+    margin-left:0;
+  }
+
+  .main #about > button {
+    margin-left: 90px;
+  }
+
+  .image {
+    width: 150px;
+    height: 200px;
+  }
+
+  #contact {
+    font-size: 1.5rem;
+    gap: 30px;
+  }
+
+  #aboutme .h3 {
+    font-size: 18px;
+  }
+
+  .main #about > h1 {
+    font-size: 3rem;
+  }
+
+  .main #about .p {
+    margin-left: 50px;
+  }
+
+  .main .form {
+    margin-left: 40px;
+  }
+
+  #projects {
+    gap: 30px;
+  }
+ 
+  #Skills {
+    margin-left: 20px;
+  }
+}
 @media (max-width: 500px) {
   .sidebar {
     width: 24%;
@@ -343,7 +418,7 @@ button{
     align-items: center;
     margin-left: 0;
   }
-
+  
   #projects {
     display: flex;
     flex-direction: column;

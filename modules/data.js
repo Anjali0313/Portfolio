@@ -15,11 +15,11 @@
   
      Theory:["Welcome to a curated showcase of some of my recent collaborations! These projects have been completed alongsice talented individuals from companies all over the world. while this gallery represets just a small glimpse of my work, it is a testament to the diverse range of projects I have had the privilege to be a part of. Explore this collection as a mere glimpse into the vast ocean of my creative endeavors." ],
      projectImg:[
-      {url:"assets/Calendar 2025-04-21 213912.png",name:"Calendar",language:"HTML,CSS,JavaScript",urlss:""},
+      {url:"assets/Calendar 2025-04-21 213912.png",name:"Calendar",language:"HTML,CSS,JavaScript",urlss:"https://calender32.netlify.app/"},
       {url:"assets/WeatherApp 2025-04-21 212135.png",name:"WeatherApp",language:"HTML,CSS,JavaScript",urlss:"https://weatherapp1565.netlify.app/"},
      { url:"assets/TypingTest.png",name:"TypingTest",language:"HTML,CSS,JavaScript",urlss:""}],
     link:[{urls:"https://github.com/Anjali0313",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUBwhMOxO7xHV9OqhDZ585TTapui1-kcj3dA&s" },
-      {urls:"",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWEH1ClwfCineP6zVJrfPgtvY-YLvdi_2Bw&s"}
+      {urls:"https://www.linkedin.com/in/anjali-27aa2a325",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWEH1ClwfCineP6zVJrfPgtvY-YLvdi_2Bw&s"}
       
     ]
 };
