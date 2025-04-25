@@ -40,28 +40,49 @@ function renderAbout(item){
   `;
 };
 
-function renderMyPortfolio(item){
-  const myportfolio =document.querySelector("#myportfolio")
-    myportfolio.innerHTML =`
-  <p>&lt;h2&gt;</p>
-  <h1>My Projects</h1>
-  <p>&lt;/h2&gt;</p>
-   <p class="p">&lt;p&gt;</p>
-   <h3 class="h3">${item.Theory}</h3>
-  <p class="p">&lt;/p&gt;</p>
-  <p>&lt;section&gt;</p>
-  <div id="projects">${item.projectImg.map(img =>
-   `<div class="images">
-  <h3>${img.name}</h3>
-  <a href="${img.urlss}" target="_blank">
-        <img class="image" src="${img.url}" />
-        </a>
-   <p>${img.language}</p>
-   </div>`
-  ).join("")}</div>
-   <p>&lt;/section&gt;</p>
+function renderMyPortfolio(item) { 
+  const myportfolio = document.querySelector("#myportfolio");
+  myportfolio.innerHTML = `
+    <p>&lt;h2&gt;</p>
+    <h1>My Projects</h1>
+    <p>&lt;/h2&gt;</p>
+    <p class="p">&lt;p&gt;</p>
+    <h3 class="h3">${item.Theory}</h3>
+    <p class="p">&lt;/p&gt;</p>
+    <p>&lt;section&gt;</p>
+    <div id="projects">
+      ${item.projectImg.map(img => `
+        <div class="images">
+          <h3>${img.name}</h3>
+          <div class="img-container">
+            <img class="image" src="${img.url}" />
+          </div>
+          <p>${img.language}</p>
+          <div class="hover-buttons">
+              <a href="${img.code}" target="_blank" class="hover-btn">
+               <p class="hover-text">view code</p>
+                <button class="icons">
+                  <img src="https://static-00.iconduck.com/assets.00/git-deployment-icon-512x512-34s1u7u4.png" alt="Git Icon" />
+                </button>
+               
+              </a>
+              <a href="${img.urlss}" target="_blank" class="hover-btn">
+              <p class="hover-text">view project</p>
+                <button class="icons">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5339/5339184.png" alt="Project Icon" />
+                </button>
+
+              </a>
+            </div>
+        </div>
+           
+      `).join("")}
+    </div>
+    <p>&lt;/section&gt;</p>
   `;
 }
+
+
 function renderAboutMe(item){
   const aboutme = document.querySelector("#aboutme")
   aboutme.innerHTML =`
@@ -102,7 +123,7 @@ function renderContact(item){
     `).join('')}
     </div>
     <div>
-    <p>Contect Form</p>
+    <p>Contact Form</p>
   <form class="contact" action="https://formsubmit.co/anjali03132001@gmail.com" method="POST">
             <input type="hidden" name="_honey" style="display:none">
             <input type="hidden" name="_captcha" value="false">
@@ -112,10 +133,8 @@ function renderContact(item){
             <input type="text" name="text" id="text" required /><br>
             <label for="name" class="label1">Email</label><br>
             <input type="email" name="Email" id="email" required /><br>
-  
             <label for="message" class="label3"> Message </label><br>
             <textarea name="message" id="message" cols="25" rows="10" required></textarea><br>
-  
             <button type="submit">
               <i class="fas fa-paper-plane"></i> &nbsp; Send Message
             </button>
