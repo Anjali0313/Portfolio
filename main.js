@@ -6,7 +6,6 @@ function renderContainer(item) {
   <div><a href="#aboutme" >About</a></div>
   <div ><a href="#Skills">My Skills</a></div>
   <div ><a href="#myportfolio">Projects</a></div>
-  <div><a href ="#aboutme">Resume</a></div>
   <div><a href ="#contact">Contact</a></div>
   </div>
   <div class="main">
